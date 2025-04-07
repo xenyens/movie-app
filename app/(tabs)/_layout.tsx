@@ -13,15 +13,15 @@ export default function _Layout() {
   const TabBarIcon = ({ title, iconName, focused }: TabBarIconInterface) => {
     if (!focused) {
       return (
-        <View className="flex flex-1">
-          <Ionicons name={iconName} size={20} />
-          <Text>{title}</Text>
+        <View className="flex flex-row flex-1 min-w-[112px] min-h-16 mt-4 justify-center items-center rounded-full overflow-hidden">
+          <Ionicons name={iconName} size={20} color="#a8b5db" />
+          <Text className="text-[#a8b5db]">{title}</Text>
         </View>
       );
     }
 
     return (
-      <View className="flex flex-row min-w-[112px] justify-center items-center bg-red-500 mt-4 min-h-16 rounded-full overflow-hidden">
+      <View className="flex flex-row min-w-[112px] justify-center items-center bg-secondary mt-4 min-h-16 rounded-full overflow-hidden">
         <Ionicons name={iconName} size={20} color={"white"} />
         <Text className="text-white">{title}</Text>
       </View>
@@ -32,6 +32,23 @@ export default function _Layout() {
     <Tabs
       screenOptions={{
         tabBarShowLabel: false,
+        tabBarItemStyle: {
+          width: "100%",
+          height: "100%",
+          justifyContent: "center",
+          alignItems: "center",
+        },
+        tabBarStyle: {
+          backgroundColor: "#0f0d23",
+          borderRadius: 50,
+          marginHorizontal: 20,
+          marginBottom: 36,
+          height: 52,
+          position: "absolute",
+          overflow: "hidden",
+          borderWidth: 1,
+          borderColor: "#0f0d23",
+        },
       }}
     >
       <Tabs.Screen
