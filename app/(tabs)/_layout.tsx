@@ -21,7 +21,7 @@ export default function _Layout() {
     }
 
     return (
-      <View className="flex flex-row min-w-[112px] justify-center items-center bg-secondary mt-4 min-h-16 rounded-full overflow-hidden">
+      <View className="flex flex-row min-w-[112px] justify-center items-center bg-gray-600 mt-4 min-h-16 rounded-full overflow-hidden">
         <Ionicons name={iconName} size={20} color={"white"} />
         <Text className="text-white">{title}</Text>
       </View>
